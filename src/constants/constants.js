@@ -40,7 +40,7 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const hoppies = [
   {
     title: "Web Developer",
     icon: web,
@@ -54,7 +54,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Systems designer",
     icon: creator,
   },
 ];
@@ -262,4 +262,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { hoppies, technologies, experiences, testimonials, projects };
