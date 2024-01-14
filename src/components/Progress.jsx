@@ -6,11 +6,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { experiences } from "../constants/constants";
+import { progress } from "../constants/constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ProgressCard = ({ progress }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -18,32 +18,32 @@ const ExperienceCard = ({ experience }) => {
         color: "#fff",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      date={progress.date}
+      iconStyle={{ background: progress.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
-            src={experience.icon}
-            alt={experience.company_name}
+            src={progress.icon}
+            alt={progress.company_name}
             className="w-[60%] h-[60%] object-contain"
           />
         </div>
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-white text-[24px] font-bold">{progress.title}</h3>
         <p
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+          {progress.company_name}
         </p>
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
+        {progress.points.map((point, index) => (
           <li
-            key={`experience-point-${index}`}
+            key={`progress-point-${index}`}
             className="text-white-100 text-[14px] pl-1 tracking-wider"
           >
             {point}
@@ -54,30 +54,27 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-const Experience = () => {
+const Progress = () => {
   return (
-    <>
+    <div id="work">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far in the field
+          My progress so far in the field
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Software Engineering Experience
+          Software Engineering Progress
         </h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
+          {progress.map((progress, index) => (
+            <ProgressCard key={`progress-${index}`} progress={progress} />
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </div>
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Progress, "progress");

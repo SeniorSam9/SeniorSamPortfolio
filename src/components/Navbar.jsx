@@ -33,6 +33,7 @@ export default function Navbar() {
                 } hover:text-white text-[18px] font-medium cursor-pointer`}
                 onClick={() => {
                   setActiveLink(item.title);
+                  //window.scrollTo(0, 1);
                 }}
               >
                 <a href={`${item.id}`}>{item.title}</a>
