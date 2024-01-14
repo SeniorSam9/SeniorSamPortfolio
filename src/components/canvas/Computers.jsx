@@ -56,7 +56,7 @@ export default function ComputerCanvas() {
   );
 }
 
-function Computer({ isMobile }) {
+const Computer = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc_3d/scene.gltf");
 
   return (
@@ -90,4 +90,4 @@ function Computer({ isMobile }) {
       />
     </mesh>
   );
-}
+};
