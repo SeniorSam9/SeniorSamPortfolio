@@ -29,7 +29,7 @@ export default function ComputerCanvas() {
 
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       shadows
       dpr={[1, 2]}
       // position: [x, y, z]
