@@ -87,22 +87,12 @@ const technologies = [
     name: "Node JS",
     icon: nodejs,
   },
-  {
-    name: "Sqlite3",
-    icon: sqlite,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
+
   {
     name: "git",
     icon: git,
   },
-  {
-    name: "Java",
-    icon: java,
-  },
+
   {
     name: "Postman",
     icon: postman,
