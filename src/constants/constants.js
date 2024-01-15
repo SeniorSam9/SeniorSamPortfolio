@@ -169,7 +169,7 @@ const projects = [
   {
     name: "CSRoot",
     description:
-      "👨‍💻The first collaborative web app for sharing Software/Computer Science resources, ideas, and recommendations.",
+      "👨‍💻 The first collaborative web app for sharing Software/Computer Science resources, ideas, and recommendations.",
     tags: [
       {
         name: "express JS",
@@ -212,14 +212,14 @@ const projects = [
   {
     name: "YourShipment",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "🚢 An app that is built to ease the process of following the progress of a shipment delivery, for both clients and administration's employees.",
     tags: [
       {
         name: "express js",
         color: "blue-text-gradient",
       },
       {
-        name: "sqlite",
+        name: "sqlite3",
         color: "green-text-gradient",
       },
       {

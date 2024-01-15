@@ -57,6 +57,11 @@ const About = () => {
           <HoppyCard key={hoppy.title} index={index} {...hoppy} />
         ))}
       </div>
+      <div className="mt-12 flex flex-col items-center gap-8">
+        <button className="bg-tertiary py-3 px-8 rounded-xl outline-none xs:w-[40%] w-full text-white text-[20px] shadow-md shadow-primary border-[1.5px]">
+          <a href="/Rayan-Aljoufi's CV.pdf">Download My Resume!</a>
+        </button>
+      </div>
     </div>
   );
 };
