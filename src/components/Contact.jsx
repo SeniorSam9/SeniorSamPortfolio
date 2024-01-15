@@ -31,11 +31,16 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+    console.log(
+      "hihihihi",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    );
     emailjs
       .send(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Rayan Aljoufi",
@@ -43,7 +48,7 @@ function Contact() {
           to_email: "RJoufii@outlook.com",
           message: form.message,
         },
-        import.meta.env.EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
