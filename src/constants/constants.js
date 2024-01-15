@@ -4,24 +4,24 @@ import {
   creator,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
-  redux,
+  java,
   tailwind,
   nodejs,
-  mongodb,
+  python,
+  postman,
+  sqlite,
+  firebase,
   git,
-  figma,
-  docker,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  boky,
   kfupm,
   dotnet,
   sol,
+  figma,
+  csroot,
+  yourshipment,
 } from "../assets";
 
 export const navLinks = [
@@ -72,16 +72,12 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "ASP.NET C#",
+    icon: dotnet,
   },
   {
     name: "Tailwind CSS",
@@ -92,24 +88,32 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Sqlite3",
+    icon: sqlite,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Python",
+    icon: python,
   },
   {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Java",
+    icon: java,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Postman",
+    icon: postman,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
+  {
+    name: "Figma",
+    icon: figma,
   },
 ];
 
@@ -173,16 +177,37 @@ const progress = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "CSRoot",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "👨‍💻The first collaborative web app for sharing Software/Computer Science resources, ideas, and recommendations.",
     tags: [
       {
-        name: "react",
+        name: "express JS",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "sqlite3",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap5",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: csroot,
+    source_code_link: "https://csroot.onrender.com/",
+  },
+  {
+    name: "BokyApp",
+    description:
+      "💻 An application that helps users have better insight into their financial performance, and increase their financial awareness by providing them with many management and planning tools 🎉.",
+    tags: [
+      {
+        name: "react_native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
@@ -190,50 +215,30 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: boky,
+    source_code_link:
+      "https://www.figma.com/file/uYlkxzNhfZuHX3PPsIYbWO/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%86%D9%81%D9%82%D8%A7%D8%AA?mode=dev",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
+    name: "YourShipment",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "express js",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "sqlite",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "bootstrap",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: yourshipment,
+    source_code_link: "https://yourshipment.onrender.com/",
   },
 ];
 
