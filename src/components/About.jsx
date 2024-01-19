@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -44,23 +44,18 @@ const About = () => {
       >
         I'm truly glad to introduce myself to you!
         <br className="sm:block hidden" />
-        I'm a self-assertive and passionate Software Engineer skilled in Web
-        Development, UI/UX fields and Software Systems. Aim to build reliable,
-        modern solutions that can scale. Always looking forward into learning
-        new Technologies & Frameworks to cope with the field! I thrive on team
-        synergy, embracing a collective exchange of enriching experiences that
-        drive me forward in my domain with unwavering passion.
+        &nbsp;I'm a self-assertive and passionate Software Engineer skilled in
+        Web Development, UI/UX fields and Software Systems. Aim to build
+        reliable, modern solutions that can scale. Always looking forward into
+        learning new Technologies & Frameworks to cope with the field! I thrive
+        on team synergy, embracing a collective exchange of enriching
+        experiences that drive me forward in my domain with unwavering passion.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {hoppies.map((hoppy, index) => (
           <HoppyCard key={hoppy.title} index={index} {...hoppy} />
         ))}
-      </div>
-      <div className="mt-12 flex flex-col items-center gap-8">
-        <button className="bg-tertiary py-3 px-8 rounded-xl outline-none xs:w-[40%] w-full text-white text-[20px] shadow-md shadow-primary border-[1.5px]">
-          <a href="/Rayan-Aljoufi's CV.pdf">Download My Resume!</a>
-        </button>
       </div>
     </div>
   );

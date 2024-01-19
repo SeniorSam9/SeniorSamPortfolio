@@ -1,5 +1,4 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -17,14 +16,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
+      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -49,6 +41,27 @@ const ProjectCard = ({
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          {name === "YourShipment" && (
+            <ul className="line-none mt-3">
+              I had the honor to work with:
+              <li className=" text-blue-600 underline flex mb-2">
+                <img
+                  src={github}
+                  alt="source code"
+                  className="w-[6%] h-[6%] object-contain"
+                />
+                <a href="https://github.com/AzizTw">Abdulaziz Al-Twaijri</a>
+              </li>
+              <li className="text-blue-600 underline flex mb-3">
+                <img
+                  src={github}
+                  alt="source code"
+                  className="w-[6%] h-[6%] object-contain"
+                />
+                <a href="https://github.com/Awshr">Aws Alharthi</a>
+              </li>
+            </ul>
+          )}
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -61,7 +74,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

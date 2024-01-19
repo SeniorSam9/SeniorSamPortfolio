@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-
+import ComputerCanvasImage from "../assets/ComputerCanvasImages.png";
 export default function Hero() {
   return (
     <section className="relative w-full h-screen mx-auto">
@@ -14,16 +14,24 @@ export default function Hero() {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Salam, I'm <span className="text-[#915eff]">Rayan</span>
+          <h1 className={`${styles.heroHeadModifiedText} text-white`}>
+            Salam, I'm <span className="text-[#915eff] font-black">Rayan</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            A software Engineer <br className="sm:block hidden" />
+            A Software Engineer <br className="sm:block hidden" />
             and a Backend, Web Applications passionate developer
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      {navigator.userAgent.toUpperCase().indexOf("ANDROID") >= 0 ? (
+        <img
+          src={ComputerCanvasImage}
+          alt="computer-canvas"
+          className="pt-[90%]"
+        />
+      ) : (
+        <ComputersCanvas />
+      )}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
