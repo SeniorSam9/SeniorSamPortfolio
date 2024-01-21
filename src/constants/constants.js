@@ -115,9 +115,9 @@ const progress = [
     iconBg: "#fff",
     date: "Sep 2018 - Jan 2024",
     points: [
-      "Mastering computer science basics: Computer Arch. C programming. OOP Design & Programming. Data Structures.",
+      "Mastering computer science basics: Computer Architecture. C programming. OOP Design & Programming. Data Structures.",
       "Web Development Course: HTML. CSS. JavaScript. Express JS. Safe SQL Queries. RESTful API's.",
-      "Advanced Database, Software Requirements and Design Patterns Networking, Software Testing. Software Quality Engineering.",
+      "Advanced Database. Software Requirements and Design Patterns. Networking. Software Testing. Software Quality Engineering.",
       "Advanced Operating Systems. Multi-process Programming (Threads). Asynchronous Programming. Flutter Mobile Development.",
     ],
   },
