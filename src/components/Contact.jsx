@@ -5,8 +5,6 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-//import dotenv from "dotenv";
-//dotenv.config();
 
 function Contact() {
   const formRef = useRef();
@@ -31,13 +29,14 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Rayan Aljoufi",
+          to_name: "Your Portfolio",
           from_email: form.email,
           to_email: "RJoufii@outlook.com",
           message: form.message,
@@ -95,6 +94,7 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="What's your good name?"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                required
               />
             </label>
             <label className="flex flex-col">
@@ -106,11 +106,13 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="What's your web address?"
                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+                required
               />
             </label>
             <label className="flex flex-col">
               <span className="text-white font-medium mb-4">Your Message</span>
               <textarea
+                required
                 rows={7}
                 name="message"
                 value={form.message}
